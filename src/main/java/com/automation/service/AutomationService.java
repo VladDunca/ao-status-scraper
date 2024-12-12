@@ -71,7 +71,8 @@ public class AutomationService {
 
             // Wait for and click the last option
             logger.info("Waiting for the last dropdown option to become clickable...");
-            WebElement lastOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[10]/div/div/ul/li[8]")));
+            WebElement lastOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[starts-with(@id, 'bm-select-wormhole-ember')])[6]//ul/li[8]")));
+
             logger.info("Selecting the last dropdown option...");
             lastOption.click();
 
